@@ -13,7 +13,11 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
+def step(number):
+    if number > 0:
+        return 1
+    else:
+        return -1
 
 
 # -----------------------------------------------
@@ -28,7 +32,12 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(array, cutoff = 0):
+    # Create a copy of the input array to avoid modifying the original
+    result = np.copy(array)
+    # Set all elements smaller than cutoff to cutoff
+    result[result < cutoff] = cutoff
+    return result
 
 
 # -----------------------------------------------
@@ -44,7 +53,8 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
-
+def neural_net_layer(matrix, array):
+    matrix_product = np.dot(matrix, array)
+    return ReLu(matrix_product)
 
 # ------------------------------------------
