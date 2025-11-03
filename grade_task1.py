@@ -1,5 +1,4 @@
 import numpy as np
-
 from tasks import step
 
 # Test cases for Task 1: step function
